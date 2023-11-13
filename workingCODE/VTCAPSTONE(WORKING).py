@@ -3,10 +3,11 @@ import virustotal_python  # Import the Virustotal API Python library
 from base64 import urlsafe_b64encode  # Import a function to encode URLs in base64 format
 
 # Define VirusTotal API key
-api_key = "MY KEY NOT YOURS"
+api_key = "68a54a91cf7d1f0575ff055fa3e860f68ab5716269acf8ac56339c97f50fa288"
 
 # Define URL that needs to be scanned
-url = "google-signin-support.com"
+url = input('Which URL would you like to check for maliciousness?: ')
+
 
 # Create a Virustotal API instance using API key
 with virustotal_python.Virustotal(api_key) as scanurl:
