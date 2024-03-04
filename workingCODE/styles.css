@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000;
+    color: #00ff00;
+}
+
+.container {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    background-color: #000;
+    color: #00ff00;
+}
+
+input[type="text"]::placeholder {
+    color: #00ff00;
+}
+
+.menu-bar {
+    background-color: #ddd; /* Light gray background */
+    color: #00ff00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-bar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-bar .menu {
+    display: none;
+}
+
+.menu-bar .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-bar .menu ul li {
+    padding: 10px;
+}
+
+.menu-bar .hamburger {
+    color: #00ff00;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hide initially */
+}
+
+@media screen and (max-width: 768px) {
+    .menu-bar .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ddd; /* Light gray background */
+        width: 100%;
+        z-index: 1;
+    }
+
+    .menu-bar .menu ul li {
+        padding: 10px 20px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .menu-bar .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+}
