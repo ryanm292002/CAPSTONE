@@ -5,8 +5,8 @@ from base64 import urlsafe_b64encode
 
 app = Flask(__name__)
 
-OTX_API_KEY = '6817b6201912aafd6e4edf725044c8abc7d00adf2f60d959eead0d0220c02bbb'
-VT_API_KEY  = '68a54a91cf7d1f0575ff055fa3e860f68ab5716269acf8ac56339c97f50fa288'
+OTX_API_KEY = 'b'
+VT_API_KEY  = ''
 
 def get_pulses(target):
     try:
