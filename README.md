@@ -1,4 +1,4 @@
- :- Welcome to the github for my Capstone Security Tool!
+<h1> :- Welcome to the github for my Capstone Security Tool! </h1>
  :- ![rhino3](https://github.com/ryanm292002/CAPSTONE/assets/71150667/fc906c86-baa4-48b9-8acd-426f9d5a0cb4)
 
  :- At its base this project uses python (flask for web integration), HTML aswell as CSS.
