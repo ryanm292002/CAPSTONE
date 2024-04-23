@@ -1,0 +1,214 @@
+/* Root variable definitions for theming */
+:root {
+    --background-color: #000000; /* Dark mode background */
+    --text-color: #00ff00; /* Dark mode text */
+    --input-bg-color: #000; /* Dark mode input background */
+    --input-text-color: #00ff00; /* Dark mode input text */
+}
+
+/* Light mode theme adjustments */
+[data-theme="light"] {
+    --background-color: #ffffff; /* Light mode background */
+    --text-color: #000000; /* Light mode text */
+    --input-bg-color: #fff; /* Light mode input background */
+    --input-text-color: #000; /* Light mode input text */
+}
+
+/* Body and HTML are set to use the full viewport height and set up for flexbox */
+html, body {
+    height: 100%; /* Ensures full viewport height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stacks children elements vertically */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif; /* Sets a base font for consistency */
+}
+
+/* Flex container for all content except footer */
+.content-wrapper {
+    flex: 1; /* Takes up all available space pushing the footer to the bottom */
+    display: flex;
+    flex-direction: column; /* Keeps content in a vertical flow */
+}
+
+/* Styling for input fields */
+input[type="text"], input[type="submit"] {
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #00ff00; /* Makes the border green */
+}
+
+/* General container for sections */
+.container {
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+    align-items: center;
+    flex-grow: 1; /* Allows the container to grow and fill space */
+}
+
+/* Styling for footer element */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    width: 100%; /* Ensures the footer spans the entire width of the viewport */
+}
+
+/* Footer links styling */
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Menu bar styling, including bottom rounded corners */
+.menu-bar {
+    background-color: #ffffff;
+    color: #00ff00;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.menu-bar .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-bar .menu ul li {
+    padding: 10px;
+}
+
+.menu-bar .menu ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-bar .menu ul li a:hover,
+.menu-bar .menu ul li a.active {
+    background-color: #45a049;
+}
+
+.menu-bar .menu ul li a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #00ff00;
+}
+
+/* Image styling within the logo container */
+.menu-bar .logo img, .container .logo img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    margin: auto; /* Centers image */
+}
+
+/* Image styling within the logo container */
+.container .logo img {
+    max-height: 100px;
+    width: auto;
+    display: block;
+    margin: auto; /* Centers image */
+}
+
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95%;
+    max-width: 1200px; /* Max width for larger screens */
+    margin: auto;
+    padding: 20px;
+}
+
+.box {
+    border: 2px solid #4CAF50; /* Green border */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light grey background */
+    flex: 1 1 250px; /* Grow to fill space, don't shrink, base width 250px */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
+}
+
+h2 {
+    color: #333;
+}
+
+h5 {
+    color: #00ff00;
+    alignment: center;
+    font-size: 25px;
+}
+
+
+
+.about-section {
+    background-color: lightgray;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.container {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid #00ff00;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    background-color: #000;
+    color: #00ff00;
+}
+
+input[type="text"]::placeholder {
+    color: #00ff00;
+}
+
+
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto; /* Centers the button horizontally and adds vertical space */
+    padding: 10px 20px; /* Optional: Adds padding around the text for better clickability */
+    text-align: center; /* Ensures text is centered inside the button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-decoration: none; /* Removes underline from link */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
+}
+
+.back-button:hover {
+    background-color: #45a049; /* Darker green on hover for better UX */
+}
