@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="content-wrapper">
+    <div class="menu-bar">
+        <div class="logo">
+    <a href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='rhino3.png') }}" alt="Ryan's URL Checker Logo">
+    </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+        <li><button onclick="toggleTheme()">Toggle Light mode</button></li>
+    <br>
+    <div class="container">
+        <div class="about-section">
+            <h1>About the Project</h1>
+            <p>This project is a python-flask tool designed to check URLs and domains for signs of maliciousness through the use of various APIs/Open source tools used by security professionals in the cybersec industry. </p>
+             <p>Instead of crosschecking multiple various websites you can use this tool to do a rapid check all at once, simply enter a URL or a domain on the home page and see results</p>
+             <p>See the github at the bottom of the page for more technical information about how this project works on the backend or at: <a href="https://github.com/ryanm292002/CAPSTONE">here</a> </p>
+            <br>
+            <h3 style="text-decoration: underline; text-align: left;">APIS used for the project:</h3>
+            <p style="text-align: left;">Virus Total is an online service that analyzes suspicious files and URLs to detect types of malware and malicious content using antivirus engines and website scanners <a href="https://virustotal.com">VT link</a></p>
+            <p style="text-align: left;">OTX AlientVault (from AT&T) provides open access to a global community of threat researchers and security professionals. <a href="https://otx.alienvault.com/">OTX AlienVault link</a></p>
+            <p style="text-align: left;">Google Safe Browsing is a service developed by Google that aims to protect users across the internet from phishing attacks, malware, and other harmful content. Its service works well and offers a wide range of APIs and other integration methods for tools just like this <a href="https://safebrowsing.google.com/">Google SafeBrowse</a></p>
+            <p style="text-align: left;">MX records is a simple DNS lookup, MX records or mail exchange records show whether or not a domain can send emails, alot of malicious domains are ones that send spam through email, if a domain is seen by malicious by the other tools+has MX records than it can be a sign of a potential email threat</p>
+            <p style="font-style: italic; width: 50%; margin: auto; text-align: center;"><em>More tools coming very soon</em></p>
+
+        </div>
+    </div>
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const currentTheme = body.getAttribute('data-theme');
+    if (currentTheme === 'light') {
+        body.setAttribute('data-theme', 'dark');
+    } else {
+        body.setAttribute('data-theme', 'light');
+    }
+}
+</script>
+</div>
+
+<br>
+<footer>
+        <div class="footer-content">
+            <p>Last updated on: April 20, 2024</p>
+            <a href="https://github.com/ryanm292002/CAPSTONE" target="_blank">GitHub</a>
+            <a href="apiryan.pythonanywhere.com" target="_blank">Donate</a>
+        </div>
+</footer>
+</body>
+</html>
