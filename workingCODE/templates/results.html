@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<br>
+        <li><button onclick="toggleTheme()">Toggle Light mode</button></li>
+    <div id="content">
+        <div class="box">
+            <h2>VirusTotal Results</h2>
+            <p>{{ vt_result }}</p>
+        </div>
+
+        <div class="box">
+            <h2>OTX Results</h2>
+            <p>{{ otx_result }}</p>
+        </div>
+
+        <div class="box">
+            <h2>Google Safe Browsing Result</h2>
+            <p>{{ sb_result }}</p>
+        </div>
+
+        <div class="box">
+            <h2>MX Record?</h2>
+            <p>{{ mx_result }}</p>
+        </div>
+
+        <div class="box">
+            <h2>Ryans Percentage</h2>
+            <p>{{ risk_score_percentage }}</p>
+        </div>
+
+        <div class="box">
+            <h2>Final Recommendation</h2>
+            <p>{{ score_result }}</p>
+        </div>
+
+        <a href="https://apiryan.pythonanywhere.com" class="back-button">Back</a>
+    </div>
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const currentTheme = body.getAttribute('data-theme');
+    if (currentTheme === 'light') {
+        body.setAttribute('data-theme', 'dark');
+    } else {
+        body.setAttribute('data-theme', 'light');
+    }
+}
+</script>
+</body>
+</html>
