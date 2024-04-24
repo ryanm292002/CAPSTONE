@@ -17,6 +17,7 @@
 
   See here for templates folder and static folder (images, css)
   Static Folder:  https://github.com/ryanm292002/CAPSTONE/tree/main/workingCODE/static
+  <br>
   Templates Folder (html pages): https://github.com/ryanm292002/CAPSTONE/tree/main/workingCODE/templates
 
 
