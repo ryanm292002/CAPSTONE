@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="content-wrapper">
+    <div class="menu-bar">
+       <div class="logo">
+    <a href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='rhino3.png') }}" alt="Ryan's URL Checker Logo">
+    </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}" class="active">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+        <li><button onclick="toggleTheme()">Toggle Light mode</button></li>
+    <br>
+    <div class="container">
+        <div class="contact-section">
+            <h1>Contact Information</h1>
+            <p>You can reach me at apiryan@proton.me</p>
+        </div>
+
+        <div class="feedback-form">
+            <h2>Feedback</h2>
+            <form action="mailto:apiryan@proton.me" method="post">
+                <textarea name="feedback" rows="10" cols="30"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const currentTheme = body.getAttribute('data-theme');
+    if (currentTheme === 'light') {
+        body.setAttribute('data-theme', 'dark');
+    } else {
+        body.setAttribute('data-theme', 'light');
+    }
+}
+</script>
+</div>
+
+<br>
+<footer>
+        <div class="footer-content">
+            <p>Last updated on: April 20, 2024</p>
+            <a href="https://github.com/ryanm292002/CAPSTONE" target="_blank">GitHub</a>
+            <a href="apiryan.pythonanywhere.com" target="_blank">Donate</a>
+        </div>
+</footer>
+</body>
+</html>
