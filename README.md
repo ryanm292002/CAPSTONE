@@ -16,12 +16,12 @@
   https://github.com/ryanm292002/CAPSTONE/blob/main/workingCODE/ryanspythonapp.py
 
   See here for templates folder and static folder (images, css)
-  Static Folder:  
-  Templates Folder (html page) : 
+  Static Folder:  https://github.com/ryanm292002/CAPSTONE/tree/main/workingCODE/static
+  Templates Folder (html pages): https://github.com/ryanm292002/CAPSTONE/tree/main/workingCODE/templates
 
 
   Big Shoutout to the below references:
-
+  https://github.com/ryanm292002/CAPSTONE/wiki/References
   
   
   
