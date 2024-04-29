@@ -1,6 +1,6 @@
 import requests
 
-API_KEY = '68a54a91cf7d1f0575ff055fa3e860f68ab5716269acf8ac56339c97f50fa288'
+API_KEY = 'aa'
 URL_TO_CHECK = "https://youtube.com"  # Replace with the URL you want to check
 
 def check_url_reputation(api_key, url):
